@@ -1,6 +1,6 @@
 const JokeComponent = (prop) => {
     return (
-        <div className="font-normal ">
+        <div className="font-normal">
             <p>{prop.jokeData} </p>
         </div>
     )

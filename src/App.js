@@ -1,6 +1,7 @@
 import "./App.css";
 import Button from "./components/button";
 import JokeComponent from "./components/joke";
+import Loading from "./components/Loading";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
@@ -42,10 +43,10 @@ function App() {
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
       <div className="w-96 h-auto p-8 bg-white rounded-md shadow-md">
-        <h1 className="text-2xl font-bold mb-4">Joke 😂</h1>
+        <h1 className="text-3xl font-medium mb-4">Joke 😂</h1>
         <div className="mb-4">
           {isLoading ? (
-            <p className="text-gray-600">Loading...</p>
+            <Loading />
           ) : (
             <JokeComponent jokeData={data?.joke} />
           )}
